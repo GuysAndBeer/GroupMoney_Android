@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65747276860",
+    "project_id": "splitwiseclone-a0e44",
+    "storage_bucket": "splitwiseclone-a0e44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65747276860:android:400a5e818fbc4c1fe9df39",
+        "android_client_info": {
+          "package_name": "com.example.splitwiseclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65747276860-jhhadc6ud78f9kjfsk362nauqpdu2k7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTnCCN47SFflcD4Lv6W-RA4ZB2cR9-5s8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65747276860-jhhadc6ud78f9kjfsk362nauqpdu2k7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

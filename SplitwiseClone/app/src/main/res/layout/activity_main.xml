@@ -1,44 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#E8E8E8"
+    android:backgroundTint="#E8E8E8"
+    tools:context=".MainActivity"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <Button
-        android:id="@+id/button6"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="#252A37"
+            app:popupTheme="@style/PopupOverlay"
+            app:subtitleTextColor="@color/common_google_signin_btn_text_dark_default"
+            app:titleTextColor="#FFFFFF" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingActionMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Start Game"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:menu_labels_showShadow="true"
+        app:menu_openDirection="up"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:menu_colorNormal="@color/yellow"
+        app:menu_colorRipple="@color/yellow"
+        app:menu_colorPressed="@color/yellow">
 
-    <Button
-        android:id="@+id/logoutbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/newgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:onClick="newgroups"
+            android:src="@drawable/ic_group_add_black_24dp"
+            app:fab_label="New Group"
+            app:menu_labels_showShadow="true"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"/>
 
-    <Button
-        android:id="@+id/profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/joingroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:onClick="joinGroup"
+            android:src="@drawable/ic_group_black_24dp"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_label="Join Group"
+            app:fab_showShadow="true"
+            app:menu_labels_showShadow="true"
+            app:srcCompat="@drawable/ic_group_black_24dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/dining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:onClick="dining"
+            android:src="@drawable/ic_local_dining_black_24dp"
+            app:fab_label="Dining"
+            app:menu_labels_showShadow="true"
+            tools:ignore="DuplicateIds,OnClick"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
